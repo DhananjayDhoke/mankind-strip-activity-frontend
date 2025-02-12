@@ -1,0 +1,210 @@
+.bar {
+  height: 350px;
+  width: 800px;
+  margin: auto;
+}
+
+.addusermodel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.addusermodel .modal-dialog {
+  max-width: 50%;
+  margin: 1.75rem auto;
+}
+
+.addusermodel .modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.addusermodel .modal-header {
+  background-image: linear-gradient(to bottom, #1f93d5, #110e5f);
+  color: white;
+  border-bottom: none;
+}
+
+.addusermodel .modal-body .form-label {
+  font-weight: 600;
+}
+
+.addusermodel .modal-body .form-control {
+  border-radius: 5px;
+  border: 1px solid #1f8dd0;
+}
+
+.addusermodel .modal-body .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.addusermodel .modal-body .text-center {
+  margin-top: 2rem;
+}
+
+.addusermodel .modal-body .btn {
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+}
+
+.campimage {
+  height: 120px;
+  width: 100px;
+  padding: 5px;
+}
+
+.showpag {
+  background-color: #e3e6e9;
+}
+.pcur {
+  cursor: pointer;
+}
+
+
+
+/* styling for model box */
+
+.bxstyle{
+  border-radius: .4em;
+  border: 1px solid #d2cfff;
+  padding: 0px 10px;
+}
+.active>.page-link, .page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #1f93d5;
+  /* border-color: #ad75c4; */
+}
+.bxcolor1{
+  /* border-left: 4px solid #1b7a8d !important; */
+  text-align: center;
+  background-color: #17a2b8;
+}
+.bxcolor2{
+  /* border-left: 4px solid #146d44 !important; */
+  text-align: center;
+  background-color: #f1c515;
+}
+.bxcolor3{
+  /* border-left: 4px solid #9b0b12 !important; */
+  text-align: center;
+  background-color: #dc3545;
+}
+.bxcolor4{
+  /* border-left: 4px solid #701b93 !important; */
+  text-align: center;
+  background-color: #6e00ff;
+}
+.bxcolor5{
+  /* border-left: 4px solid #d3a519 !important; */
+  text-align: center;
+  background-color: #198754;
+}
+
+.btstyle{
+  font-weight: 600;
+  color: #ffffff  !important;
+}
+.btstyle1{
+  font-weight: 600;
+  font-size: x-large;
+  color: #ffffff;
+}
+.bxstyle .card-body {
+  flex: 1 1 auto;
+  padding: 0rem !important;
+}
+
+/* .checked-color{
+  background-color: greenyellow;
+} */
+
+.btn-hover:hover{
+  color: black !important;
+}
+
+.form-control1 {
+  -webkit-appearance: menulist !important;  
+  -moz-appearance: menulist !important;    
+  appearance: menulist !important;          
+}
+
+
+/* for action menu  */
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Gear Icon Button */
+.gear-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+.gear-button:hover {
+  color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 30px;
+  /* left: 0; */
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 160px;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+
+
+
+@media (max-width: 767px) { 
+  .addusermodel .modal-dialog{
+    max-width: 100%;
+    margin: 5px;
+  }
+}

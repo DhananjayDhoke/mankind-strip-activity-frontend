@@ -1,0 +1,14 @@
+.bglogin {
+  background-image: url("/images/bg1.jpg") !important;
+  background-size: cover !important;
+}
+.logo1 img {
+  max-height: 90px;
+  background-color: #fff;
+  border-radius: 0.4em;
+  padding: 3px;
+  margin-right: 6px;
+}
+.form-control:focus{
+  background-color: #fff !important;
+}

@@ -33,12 +33,12 @@ const DashboardBox = () => {
   return (
     <>
     {boxItem.map((item)=>(
-            <div key={item.label} className="col-xl-2 col-md-2 mx-auto mb-4">
-            <div className={`card shadow h-100 bxstyle ${item.class}`}>
+            <div key={item.label} className="col-xl-4 col-md-4 mx-auto mb-4">
+            <div className={`card shadow  bxstyle ${item.class}`}>
               <div className="card-body">
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
-                    <div className="text-xl font-weight-bold text-primary m-2 text-uppercase btstyle">
+                    <div className="text-xl font-weight-bold text-primary m-2  btstyle">
                       {item.label}
                     </div>
                     <div className=" mb-0 font-weight-bold text-gray-800 btstyle1">

@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.msgnote{
+  color: #bb0909;
+  font-weight: 500;
+  display: none;
+}
+.msgnote1{
+  color: #bb0909;
+  font-weight: 500;
+  
+}
 .ml-1 {
   margin-left: 3px !important;
 }
@@ -25,7 +44,7 @@ input.form-control[disabled] {
   background-image: linear-gradient(to bottom, #198754, #0d4e30);
 }
 .bg-warning {
-  background-image: linear-gradient(to bottom, #f1c515, #a18204);
+  background-image: linear-gradient(to bottom, #eba716, #bb8512);
 }
 .btn-primary {
   color: #fff;
@@ -79,7 +98,7 @@ select:focus {
   font-size: 13px;
   display: block;
   width: 100%;
-  height: 36px;
+  height: 37px;
   padding: 0 15px;
   background: #fff;
   color: #323840;
@@ -173,5 +192,10 @@ select.did-floating-select::-ms-expand {
   
   .radd-model{
     width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .msgnote{
+    display: block;
   }
 }

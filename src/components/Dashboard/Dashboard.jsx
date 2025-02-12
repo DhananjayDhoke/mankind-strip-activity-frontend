@@ -764,7 +764,7 @@ const handleQuantityChange = (index, event) => {
             <div className="col-lg-12">
               <div className="card">
                 <div className="card-body">
-                  
+                  <small className="msgnote mt-2">*Scroll left for other column of table</small>
                   <hr />
                   <div className="">
                     <table className="table table-hover newcss">
@@ -791,7 +791,7 @@ const handleQuantityChange = (index, event) => {
                                 <td>{e.qualification}</td>
                                 <td>
                                  {e.status === 'Y' ? <span className="badge bg-success">
-                                  Complete
+                                  Completed
                                 </span>
                                 :<span className="badge bg-warning">
                                   Pending
@@ -880,7 +880,7 @@ const handleQuantityChange = (index, event) => {
                 </div>
                 <div className="modal-body">
                  
-                  <form className="row g-3">
+                  <form className="">
                     
                     <div className="row g-3">
                     <div className="col-md-6 did-floating-label-content">
@@ -895,7 +895,23 @@ const handleQuantityChange = (index, event) => {
                         Doctor Status
                       </label>
                     </div>
-
+                    {infoData && infoData.activityName &&
+                 
+                      <div className="col-md-6 did-floating-label-content">
+                      <input
+                        type="text"
+                        className="form-control did-floating-input"
+                        placeholder="Activity Name"
+                        value={infoData && infoData.activityName}
+                        readOnly
+                      />
+                      <label className="form-label did-floating-label">
+                        Activity Name
+                      </label>
+                  
+                  </div>
+                    }
+                
                     <div className="col-md-6 did-floating-label-content">
                       <input
                         type="text"
@@ -908,24 +924,10 @@ const handleQuantityChange = (index, event) => {
                         Date
                       </label>
                      </div>
+              
                     </div>
-
-                    {infoData && infoData.activityName &&
-                     <div className="row">
-                      <div className="col-md-6 did-floating-label-content">
-                      <input
-                        type="text"
-                        className="form-control did-floating-input"
-                        placeholder="Activity Name"
-                        value={infoData && infoData.activityName}
-                        readOnly
-                      />
-                      <label className="form-label did-floating-label">
-                        Activity Name
-                      </label>
-                    </div>
-                  </div>
-                    }
+                    <hr/>
+                    
 
                     {infoData && infoData.skuValues.length > 0 && 
                         infoData.skuValues
@@ -933,6 +935,7 @@ const handleQuantityChange = (index, event) => {
                           const sku = data[`sku${index + 1}`];
                           if(sku !==""){
                             return (
+                            
                               <div key={index} className="row">
                                   {/* SKU Input */}
                                   <div className="col-md-6 did-floating-label-content">
@@ -992,7 +995,7 @@ const handleQuantityChange = (index, event) => {
                 </div>
                 <div className="modal-body">
                   
-                    <form className="row g-3">
+                    <form className="">
 
                     <div className="row g-3">
                       <div className="form-group col-md-6 did-floating-label-content">
@@ -1047,9 +1050,31 @@ const handleQuantityChange = (index, event) => {
                     </div>}
                     </div>
                     
-                     
+                    <div className="row g-3">
+                       <div
+                        className="form-group col-md-6 did-floating-label-content"
+                        onClick={() => document.getElementById('campDateInput').showPicker()} // Trigger Date Picker
+                       
+                      >
+                        <input
+                          id="campDateInput"
+                          type="date"
+                          className="form-control did-floating-input pcur"
+                          onChange={(e) => setCampDate(e.target.value)}
+                          placeholder="Date"
+                          value={campDate}
+                          //min={new Date().toISOString().split('T')[0]}
+                          
+                        />
+                        <label className="form-label did-floating-label">Date</label>
+                      </div> 
+                      </div> 
+                    
                        {doctorStatusId == 1 && 
                        <>
+                       <hr/>
+                       <small className="msgnote1 mt-2 ">*Minimum one SKU required</small>
+                       <div className="mt-2"></div>
                          {skuValues.map((item, index) => (
                       <div key={index} className="row">
                         <div className="form-group col-md-6 did-floating-label-content">
@@ -1080,24 +1105,7 @@ const handleQuantityChange = (index, event) => {
                         ))}
                       
                        </>}
-
-                       <div
-                        className="form-group col-md-6 did-floating-label-content"
-                        onClick={() => document.getElementById('campDateInput').showPicker()} // Trigger Date Picker
-                       
-                      >
-                        <input
-                          id="campDateInput"
-                          type="date"
-                          className="form-control did-floating-input pcur"
-                          onChange={(e) => setCampDate(e.target.value)}
-                          placeholder="Date"
-                          value={campDate}
-                          //min={new Date().toISOString().split('T')[0]}
-                          
-                        />
-                        <label className="form-label did-floating-label">Date</label>
-                      </div>  
+                    
                     </form>
                   
                     <div className="text-center">
@@ -1133,7 +1141,7 @@ const handleQuantityChange = (index, event) => {
                 ></button>
               </div>
               <div className="modal-body">
-                    <form className="row g-3">
+                    <form className="">
 
                   <div className="row g-3">
                     <div className="form-group col-md-6 did-floating-label-content">
@@ -1172,10 +1180,29 @@ const handleQuantityChange = (index, event) => {
                         />
                   </div>}
                   </div>
-
+                  <div className="row g-3">
+        <div
+          className="form-group col-md-6 did-floating-label-content"
+          onClick={() => document.getElementById('campDateInput').showPicker()} // Trigger Date Picker
+        
+        >
+          <input
+            id="campDateInput"
+            type="date"
+            className="form-control did-floating-input pcur"
+            onChange={(e) => setCampDate(e.target.value)}
+            placeholder="Date"
+            value={campDate}
+           // min={new Date().toISOString().split('T')[0]}
+            
+          />
+          <label className="form-label did-floating-label">Date</label>
+        </div>  
+        </div>
       
         {doctorStatusId == 1 && 
         <>
+        <hr/>
           {skuValues.map((item, index) => (
            <div key={index} className="row">
           <div className="form-group col-md-6 did-floating-label-content">
@@ -1206,24 +1233,7 @@ const handleQuantityChange = (index, event) => {
           ))}
         
         </>}
-
-        <div
-          className="form-group col-md-6 did-floating-label-content"
-          onClick={() => document.getElementById('campDateInput').showPicker()} // Trigger Date Picker
-        
-        >
-          <input
-            id="campDateInput"
-            type="date"
-            className="form-control did-floating-input pcur"
-            onChange={(e) => setCampDate(e.target.value)}
-            placeholder="Date"
-            value={campDate}
-           // min={new Date().toISOString().split('T')[0]}
-            
-          />
-          <label className="form-label did-floating-label">Date</label>
-        </div>  
+       
                     </form>
                   <div className="text-center">   
                     <button
